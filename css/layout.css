@@ -80,6 +80,7 @@ body {
 }
 
 .article {
+    overflow: hidden;
     padding-bottom: 48px;
     @media (min-width: 768px) {
         padding-bottom: 64px;
