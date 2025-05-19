@@ -1,0 +1,113 @@
+:root {
+	--font-main: 'Roboto', Arial, Helvetica, sans-serif;
+	--text-body-size: 16px;
+}
+:root {
+    --cubic: cubic-bezier(0.2, 0, 0.5, 1);
+    --trans: all 0.3s var(--cubic);
+    --trans-slow: all 0.5s var(--cubic);
+    --modal-duration: 0.3s;
+}
+
+:root {
+    --wrapper-space: 12px;
+    @media (min-width: 480px) {
+        --wrapper-space: 16px;
+    }
+    @media (min-width: 768px) {
+        --wrapper-space: 32px;
+    }
+    @media (min-width: 1440px) {
+        --wrapper-space: 60px;
+    }
+}
+
+*{
+    scrollbar-width: thin;
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 5px;
+    height: 5px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+html.scroll-smooth-disabled {
+    scroll-behavior: auto;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    background: #fff;
+    color: #000;
+    line-height: 150%;
+    font-size: var(--text-body-size);
+    font-family: var(--font-main);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding-top: 40px;
+    @media (min-width: 480px) {
+        padding-top: 48px;
+    }
+     @media (min-width: 768px) {
+        margin-bottom: 86px;
+    }
+    @media (min-width: 1440px) {
+        margin-bottom: 104px;
+    }
+}
+.wrapper__page {
+  width: 100%;
+  max-width: 1261px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--wrapper-space);
+  padding-right: var(--wrapper-space);
+}
+.wrapper__wide {
+  width: auto;
+  margin-left: calc(-1 * var(--wrapper-space));
+  margin-right: calc(-1 * var(--wrapper-space));
+}
+
+.article {
+    padding-bottom: 48px;
+    @media (min-width: 768px) {
+        padding-bottom: 64px;
+    }
+    @media (min-width: 1440px) {
+        padding-bottom: 166px;
+    }
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer{
+    flex: 0 0 auto;
+}
+
+[data-src],[data-src-bg]{
+    opacity: 0;
+    transition: opacity 0.3s var(--cubic);
+}
+[data-src],[data-src-bg].img-loaded {
+    opacity: 1;
+}
+
+.svg-mask {
+    position: absolute;
+    z-index: -1;
+    left: -100%;
+    top: -100%;
+}
