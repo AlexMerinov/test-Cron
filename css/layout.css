@@ -79,7 +79,7 @@ body.menu-show {
         background-size: contain;
 
         position: absolute;
-        position: absolute;
+        position: absolutegit;
         top: 0;
         right: 484px;
         @media (max-width: 1440px) {
