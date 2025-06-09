@@ -359,6 +359,7 @@ body.menu-show {
     height: 910px;
     display: flex;
     position: relative;
+    min-height: 700px;
     &::after {
         content: '';
         display: block;
@@ -393,7 +394,8 @@ body.menu-show {
 
         @media (max-width: 768px) {
             top: 30px;
-            /* opacity: 0.7; */
+            width: 300px;
+            height: 300px;
         }
     }
     &::before {
